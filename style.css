@@ -241,8 +241,25 @@ input:focus, select:focus, textarea:focus {
 footer { text-align: center; padding: 1.5rem; color: #6b7390; border-top: 1px solid #2a2a45; }
 
 @media (max-width: 700px) {
-  .navbar { flex-direction: column; gap: 0.6rem; }
-  .hero { text-align: center; }
+  body { font-size: 1rem; }
+
+  .navbar { flex-direction: column; gap: 0.6rem; padding: 0.8rem 4%; }
+  .nav-links a { padding: 0.4rem 0.9rem; }
+
+  .hero { flex-direction: column; text-align: center; padding: 2.5rem 5%; gap: 1.5rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .profile-photo { width: 180px; height: 180px; }
   .socials { justify-content: center; }
-  .hero h1 { font-size: 1.6rem; }
+
+  .typing { width: auto; animation: blink 0.8s step-end infinite; white-space: normal; }
+
+  .container { padding: 0 1rem; margin: 1.5rem auto; }
+  .card { padding: 1.2rem; }
+  .card h2 { font-size: 1.1rem; }
+
+  table { display: block; overflow-x: auto; white-space: nowrap; }
+
+  .projects { grid-template-columns: 1fr; }
+
+  .btn { width: 100%; text-align: center; align-self: stretch; }
 }
