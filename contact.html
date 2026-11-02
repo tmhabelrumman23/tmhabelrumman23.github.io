@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>168644 - Tareq M. Hab El-Rumman | Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <div class="logo">
+        >> RUMMANEH
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html" class="active">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <section class="card form-card">
+        <h2>Contact Me</h2>
+
+        <form onsubmit="return validateForm(event)">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname">
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email">
+
+          <label for="country">Country</label>
+          <select id="country">
+            <option value="">Select your country</option>
+            <option>Jordan</option>
+            <option>United States</option>
+            <option>Saudi Arabia</option>
+            <option>United Arab Emirates</option>
+            <option>Egypt</option>
+            <option>Palestine</option>
+            <option>Other</option>
+          </select>
+
+          <label for="comments">Comments</label>
+          <textarea id="comments" rows="5"></textarea>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/tareq-m-hab-el-rumman-51a733336" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/rrummanehh" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>&copy; Tareq M. Hab El-Rumman | 168644</footer>
+
+    <script>
+      function validateForm(event) 
+      {
+        event.preventDefault();
+        var name = document.getElementById("fullname").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var country = document.getElementById("country").value;
+        var comments = document.getElementById("comments").value.trim();
+
+        if (name === "" || email === "" || country === "" || comments === "") 
+        {
+          alert("Please fill in all fields before submitting.");
+          return false;
+        }
+
+        alert("Form submitted successfully. Thank you, " + name + "!");
+        event.target.reset();
+        return true;
+      }
+    </script>
+  </body>
+</html>
